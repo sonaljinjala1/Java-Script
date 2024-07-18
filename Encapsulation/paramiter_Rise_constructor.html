@@ -1,0 +1,32 @@
+<script type="text/javascript">
+
+    class demo {
+
+        constructor(a, b) {
+            this.a = a;
+            this.b = b;
+        }
+
+        sum() {
+            console.log(`sum=${this.a + this.b}`);
+        }
+
+        checkAge() {
+            if (this.a > this.b) {
+                console.log("X is big");
+            }
+            else {
+                console.log("Y is big");
+            }
+        }
+
+    }
+
+    let obj = new demo(50, 22);
+    obj.sum();
+    obj.checkAge();
+
+
+
+
+</script>

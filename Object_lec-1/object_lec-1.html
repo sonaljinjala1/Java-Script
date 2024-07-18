@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <style>
+        body{
+            background-color: rgb(254, 255, 238);
+            text-align: start; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+        }
+        h1{
+            font-size: 30px ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="name"></h1>
+    <h2 id="course"></h2>
+    <h2 id="Duration"></h2>
+    <h2 id="country"></h2>
+    <h2 id="City"></h2>
+    <h2 id="state"></h2>
+    <h2 id="area"></h2>
+    <h2 id="pin-code"></h2>
+    <h2 id="university"></h2>
+    <h2 id="state"></h2>
+    <h2 id="email"></h2>
+    <h2 id="password"></h2>
+ 
+
+
+</body>
+
+<script>
+
+    let obj = {//ane iobject ni ader object kahevay che tene nested object kahevay che .
+        name: "sonal Jinjala",
+        email: "sonaljinjala1@gmail.com",
+        password: "1234567",
+        city:{
+            area : {
+                Address :"digital vally",
+                pincode :"394105",
+            }
+        },
+        country: {
+            country: {
+                    ABRODE :"LONDON",
+                    university: "standford University",
+                    country: "India"
+            },
+            state: "gujrat",
+            City: ["surat", "vadora", "Ahmedabad","delhi","baroda","dubai"]
+        },
+        course: {
+            course:"Full stack web development",
+            Duration : "15 Month",
+        }
+    }
+
+
+    document.getElementById('name').innerHTML=`Name :- ${obj.name}`;//ahi hamesa karli breket j karvanu che . ane tene j templet kahvay che.
+    document.getElementById('email').innerHTML=`email :- ${obj.email}`;//templet
+    document.getElementById('password').innerHTML=`password :- ${obj.password}`;//templet
+    document.getElementById('pin-code').innerHTML=`pin-code :- ${obj.city.area.pincode}`;//templet
+    document.getElementById('area').innerHTML=`area :- ${obj.city.area.Address}`;//templet
+    document.getElementById('university').innerHTML=`University :- ${obj.country.country.university}`;
+    document.getElementById('state').innerHTML=`state :- ${obj.country.state}`;
+    document.getElementById('City').innerHTML=`City :- ${obj.country.City[0]}`;
+    document.getElementById('course').innerHTML=`course :- ${obj.course.course}`;
+    document.getElementById('Duration').innerHTML=`Duration :- ${obj.course.Duration}`;
+    document.getElementById('country').innerHTML=`country:- ${obj.country.country.country}`;
+    
+
+</script>
+
+</html>
+
+
+// let a = "11" + "11";//string hovathi value join thay che. (+=join pan kahi sakay che)
+// let b = "40" - "10";//string ma (-) work karse only (+) ma join thay jay che
+// let c = 10 + 10;//Aa only int hovathi + thase
+
+
+// console.log(a);
+// console.log(b);
+// console.log(c);

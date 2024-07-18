@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> form_value</title>
+</head>
+
+
+<body>
+
+    <form>
+        <table align="center" border="1">
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" id="name"> </td>
+            </tr>
+            <tr>
+                <td>phone: </td>
+                <td><input type="number" id="phone"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" onclick="saverecord()" value="button"> </td>
+            </tr>
+        </table>
+    </form>
+<!-- saverecord ma function karvu compalsary che. Aa babat khas yad rakhva ni che  onclick ma function() ma breket karvu compalsary che. -->
+
+    <script type="text/javascript">
+
+        function saverecord() {
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+            if (!name) {
+                alert("Name is required");
+            }
+
+            if (!phone) {
+                alert("phone is required");
+            }
+
+            console.log(name);
+            console.log(phone);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

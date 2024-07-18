@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Object with table</title>
+    <title>Object with table-Make Slider</title>
     <style>
         table {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 20px;
         }
 
@@ -16,17 +16,15 @@
             border: 2px solid black;
             margin-bottom: 20px;
         }
-
         table thead tr th {
             font-weight: 800;
             width: 90px;
         }
-
         table tbody tr td {
             background-color: #ffe9fc;
         }
     </style>
-
+    
 </head>
 
 <body>
@@ -48,7 +46,7 @@
             <tbody id="data"></tbody>
         </table>
     </div>
-
+    
     <script>
         let record = [
             {
@@ -114,11 +112,11 @@
         ]
 
         let filterTbl = "";
-
+        
         let filterRecord = record.filter((val) => {
             return val.dep === "ui/ux" || val.city === "surat";
         })
-
+        
         filterRecord.map((val, index) => {
             filterTbl += `
                         <tr>

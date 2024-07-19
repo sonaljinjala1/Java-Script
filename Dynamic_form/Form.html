@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic_form</title>
+
+    <style>
+        body {
+            background-color: rgba(255, 192, 203, 0.283);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div align="center">
+            <h2>Add User</h2>
+            <form>
+                name : <input type="text" id="name">
+                phone: <input type="text" id="phone">
+                <input type="button" onclick="SaveRecord()" value="submit">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div align="center">
+            <h2>View User</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>sr.No</th>
+                        <th>name</th>
+                        <th>phone</th>
+                    </tr>
+                </thead>
+            </table>
+
+        </div>
+    </section>
+
+
+
+
+    <script type="text/javascript">
+
+        let data = [];
+        const SaveRecord = () => {
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+
+            if (!name || !phone) {
+                alert("All Field is required");
+                return false;
+            }
+
+            let obj = {
+                grid: Math.floor(Math.random() * 100000),
+                UserName: name,
+                UserPhone: phone
+            }
+            data.push(obj)
+            console.log(data);
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+        }
+
+
+    </script>
+</body>
+
+</html>

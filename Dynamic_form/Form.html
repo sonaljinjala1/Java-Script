@@ -4,70 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic_form</title>
-
-    <style>
-        body {
-            background-color: rgba(255, 192, 203, 0.283);
-        }
-    </style>
+    <title>Dynamic_Form_with_Components</title>
 </head>
 
 <body>
+
     <section>
         <div align="center">
-            <h2>Add User</h2>
+            <h2>Log In Form</h2>
             <form>
-                name : <input type="text" id="name">
-                phone: <input type="text" id="phone">
-                <input type="button" onclick="SaveRecord()" value="submit">
+                Name : <input type="text" id="name">
+                Phone No. : <input type="tel:" id="phone">
+                <input type="button" onclick="SaveRecord()" value="submit" style="display: block; margin-top: 10px;">
             </form>
         </div>
     </section>
 
     <section>
         <div align="center">
-            <h2>View User</h2>
-            <table border="1">
+            <h2>User Included</h2>
+            <table border="1" cellpadding="5" cellspacing="2">
                 <thead>
                     <tr>
-                        <th>sr.No</th>
-                        <th>name</th>
-                        <th>phone</th>
+                        <th>Sr No.</th>
+                        <th>Name</th>
+                        <th>Phone No.</th>
                     </tr>
                 </thead>
+                <tbody id="record"></tbody>
             </table>
-
         </div>
     </section>
 
-
-
-
     <script type="text/javascript">
-
         let data = [];
+        const ViewRecord = () => {
+            let tbl = "";
+            data.map((val, index) => {
+                return (
+                    tbl += `
+                        <tr>
+                            <td>${++index}</td>    
+                            <td>${val.username}</td>    
+                            <td>${val.userphone}</td>    
+                        </tr>
+                    `
+                )
+            })
+            document.getElementById('record').innerHTML = tbl
+        }
+        ViewRecord();
         const SaveRecord = () => {
             let name = document.getElementById('name').value;
             let phone = document.getElementById('phone').value;
-
             if (!name || !phone) {
-                alert("All Field is required");
+                alert("All fields are required...");
                 return false;
             }
-
             let obj = {
-                grid: Math.floor(Math.random() * 100000),
-                UserName: name,
-                UserPhone: phone
+                grid: Math.floor(Math.random() * 100),
+                username: name,
+                userphone: phone
             }
-            data.push(obj)
+            data.push(obj);
             console.log(data);
             document.getElementById('name').value = "";
             document.getElementById('phone').value = "";
+            ViewRecord();
         }
-
-
     </script>
 </body>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <h2>Form Validation</h2>
+        <form>
+            Name: <input type="text" id="name">
+            <br>
+            <span id="nameerr" style="color: red;"></span>
+            <br>
+            <br>
+            Email: <input type="text" id="email">
+            <br>
+            <span id="eamilerr" style="color: red;"></span>
+            <br>
+            <br>
+            <button type="button" onclick="formvalidation()"> submit</button>
+            <br>
+            <br>
+            <p id="success" style="color: green;"></p>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+
+        const formvalidation = () => {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+
+            let check = true
+
+            if (!name) {
+                document.getElementById('nameerr').innerHTML = `Name is required`;
+                check = false
+            }
+            if (!email) {
+                document.getElementById('eamilerr').innerHTML = `Email is required`;
+                check = false
+            }
+            else {
+                const emailregex = /^[^s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailregex.test(email)) {
+                    document.getElementById('eamilerr').innerHTML = `Email is not valid`;
+                    check = false;
+                }
+            }
+            if (check === true) {
+                document.getElementById('success').innerHTML = "Form is submited";
+            }
+            document.getElementById('name').value = "";
+            document.getElementById('email').value = "";
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

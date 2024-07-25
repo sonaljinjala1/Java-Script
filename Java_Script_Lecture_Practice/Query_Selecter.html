@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query_Selecter</title>
+</head>
+
+<body>
+    <p>sonal</p>
+    <p>asha</p>
+    <p>jadavbhai</p>
+    <button onclick="clickEvent()">click</button>
+
+
+    <script type="text/javascript">
+        const clickEvent = () => {
+            let p = document.querySelectorAll('p');
+            console.log(p);
+            for (let i = 0; i < p.length; i++) {
+                if (i % 2 == 0) {
+                    p[i].style.color = "red"
+                    p[i].style.fontSize = "40px"
+                }
+                else {
+                    p[i].style.color = "blue";
+                    p[i].innerHTML = "Jinjala"
+                    p[i].style.fontSize = "20px"
+                }
+            }
+
+        };
+
+
+    </script>
+
+</body>
+
+</html>

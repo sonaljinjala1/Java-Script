@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+   
+    <form align="center">
+        <!-- <h2>JSON-FORM</h2> -->
+        <br>
+        <br>
+        Name: <input type="text" id="name">
+        <button type="button" onclick="saveData()">submit</button>
+
+    </form>
+
+
+
+    <script type="text/javascript">
+        let data = []
+        const saveData = () => {
+            let username = document.getElementById('name').value;
+
+            let obj = {
+                id: Math.floor(Math.random() * 10000),
+                name: username
+            }
+            data.push(obj);
+            localStorage.setItem('users', JSON.stringify(data))
+            alert("record add")
+        }
+
+
+    </script>
+</body>
+
+</html>

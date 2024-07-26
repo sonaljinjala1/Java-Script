@@ -1,0 +1,16 @@
+{
+    "data" : [
+        {
+            "name" : "sonal",
+            "phone" : "4535647687"
+        }
+    ],
+    "country" :[
+        {
+            "name" : "india"
+        },
+        {
+            "name" : "london"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A to D Nested IF-Else</title>
+</head>
+
+<body>
+
+    <script>
+        let a = parseInt(prompt("Enter Number A:- "));
+        let b = parseInt(prompt("Enter Number b:- "));
+        let c = parseInt(prompt("Enter Number c:- "));
+        let d = parseInt(prompt("Enter Number d:- "));
+
+
+
+        if (a > b)
+            if (a > c)
+                if (a > d)
+                    document.write("A is Max....!");
+
+                else
+                    document.write("B is Max....!");
+
+
+            else
+                if (c > d)
+                    document.write("c is Max....!");
+
+                else
+                    document.write("d is Max....!");
+
+
+
+        else
+            if (b > c)
+                if (b > d)
+                    document.write("B is Max....!");
+
+                else
+                    document.write("d is Max....!");
+
+
+            else
+                if (c > d)
+                    document.write("c is Max....!");
+
+                else
+                    document.write("d is Max....!");
+
+
+
+    </script>
+
+</body>
+
+</html>

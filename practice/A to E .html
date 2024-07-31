@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A to E Nested If_Else</title>
+</head>
+
+<body>
+
+    <script>
+
+        let a = parseInt(prompt("Enter Number A:-  "));
+        let b = parseInt(prompt("Enter Number B:-  "));
+        let c = parseInt(prompt("Enter Number c:-  "));
+        let d = parseInt(prompt("Enter Number d:-  "));
+        let e = parseInt(prompt("Enter Number e:-  "));
+
+
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {
+                    if (a > e) {
+                        document.write("A is Max.....!");
+                    }
+                    else {
+                        document.write("E is Max.....!");
+                    }
+                }
+                else {
+                    if (d > e) {
+                        document.write("d is Max.....!");
+                    }
+                    else {
+                        document.write("e is Max.....!");
+                    }
+                }
+            }
+            else {
+                if (c > d) {
+                    if (c > e) {
+                        document.write("c is Max.....!");
+                    }
+                    else {
+                        document.write("e is Max.....!");
+                    }
+                }
+                else {
+                    if (d > e) {
+                        document.write("d is Max.....!");
+                    }
+                    else {
+                        document.write("E is Max.....!");
+                    }
+                }
+            }
+        }
+        else {
+            if (b > c) {
+                if (b > d) {
+                    if (b > e) {
+                        document.write("B is Max.....!");
+                    }
+                    else {
+                        document.write(" E is Max.....!");
+                    }
+                }
+                else {
+                    if (d > e) {
+                        document.write(" D is Max.....!");
+                    }
+                    else {
+                        document.write("E is Max.....!");
+                    }
+                }
+            }
+            else {
+                if (c > d) {
+                    if (c > e) {
+                        document.write(" C is Max.....!");
+                    }
+                    else {
+                        document.write(" E is Max.....!");
+                    }
+                }
+                else {
+                    if (d > e) {
+                        document.write("  D is Max.....!");
+                    }
+                    else {
+                        document.write(" E is Max.....!");
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter_app</title>
+    <style>
+        body {
+            background-color: rgb(196, 208, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+        }
+
+        h1 {
+            align-items: center;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            margin-top: 100px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .count {
+            width: 1000px;
+            height: 400px;
+            background-color: rgb(214, 216, 255);
+            border-radius: 100px;
+        }
+
+        .button,
+        .reset {
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 0;
+        }
+
+        button {
+            width: 150px;
+            height: 60px;
+            background-color: rgb(100, 100, 180);
+            color: white;
+            font-size: 40px;
+            border: 0;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        #number {
+            font-size: 50px;
+            margin: 0 !important;
+            margin-bottom: 30px;
+        }
+
+    /* jyre decrement jyre disabled karelu hoy tyre not allow thavu joue cursor/
+.  tya suthi not allowed n thavu joye */
+        #decrement:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Counter App</h1>
+    <div class="container">
+        <div class="count">
+            <div class="button">
+                <button type="button" onclick="increment()">+</button>
+                <h2 id="number">0</h2>
+                <button type="button" onclick="decrement()" id="decrement">-</button>
+            </div>
+
+
+            <div class="reset">
+                <button type="button" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        let num = 0;
+        if (num <= 0) {
+            document.getElementById('decrement').disabled = true;
+        }
+
+        const increment = () => {
+            num++;
+            document.getElementById('number').innerHTML = `${num}`;
+            document.getElementById('decrement').disabled = false;
+        }
+
+        const decrement = () => {
+            if (num <= 0) {
+                document.getElementById('decrement').disabled = true;
+            }
+            else {
+                num--;
+                document.getElementById('number').innerHTML = `${num}`;
+            }
+        }
+
+        const reset = () => {
+            num = 0;
+            document.getElementById('number').innerHTML = `${num}`;
+            document.getElementById('decrement').disabled = true;
+        }
+
+    </script>
+</body>
+
+</html>

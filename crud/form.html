@@ -5,61 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud.js</title>
-    
+
     <style>
-        body{
-            background-color: rgba(87, 93, 255, 0.441);
-            font-family:'Times New Roman', Times, serif;
+        body {
+            background-color: rgb(180, 162, 255);
+            font-family: 'Times New Roman', Times, serif;
         }
-        h1{
+
+        h1 {
             font-weight: 600;
 
         }
-        form{
-            font-family:'Times New Roman', Times, serif;
+
+        form {
+            font-family: 'Times New Roman', Times, serif;
             font-size: 30px;
             font-weight: 600;
         }
-        input{
+
+        input {
             width: 350px;
             height: 30px;
             font-size: 18px;
             border-radius: 5px;
         }
-        button{
+
+        button {
             background-color: rgba(94, 140, 255, 0.756);
             width: 100px;
             height: 40px;
             font-size: 20px;
             font-weight: 600;
             color: white;
-            border:1px solid white;
+            border: 1px solid white;
             border-radius: 5px;
             align-items: center;
-            
+
         }
-        
-        table thead tr td{
+
+        table thead tr td {
             font-size: 25px;
             font-weight: 600;
             text-transform: capitalize !important;
-            padding: 20px ;
+            padding: 20px;
             align-items: center;
             text-align: center;
             border: 1.5px solid black;
 
         }
-        table tbody td{
+
+        table tbody td {
             text-align: center;
             font-size: 20px;
             color: black;
             padding: 8px 10px !important;
             font-weight: 500;
             border: 1.5px solid black;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
     </style>
-    
+
 </head>
 
 
@@ -70,11 +75,12 @@
             <input type="hidden" id="editid"><br>
             Name: &nbsp; <input type="text" id="name" placeholder=" &nbsp; Enter Name"><br><br>
             Phone: &nbsp; <input type="text" id="phone" placeholder=" &nbsp; Enter Phone"><br><br>
-             <button id="add" onclick="saveData()" type="button" style="margin-left: 80px;">Submit</button>
-            <button id="edit" onclick="updateData()" type="button" style="display:none; margin-left: 80px;" >Edit</button>
+            <button id="add" onclick="saveData()" type="button" style="margin-left: 80px;">Submit</button>
+            <button id="edit" onclick="updateData()" type="button"
+                style="display:none; margin-left: 80px;">Edit</button>
         </form><br><br>
 
-        <table border="1" cellspacing="0"  >
+        <table border="1" cellspacing="0">
             <thead>
                 <tr>
                     <td>Sr.no</td>

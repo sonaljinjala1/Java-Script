@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> two variable addition, subtraction, multiplication, division .(compulsory user input)</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+
+        table thead th {
+            color: black;
+            font-size: 35px;
+            padding: 15px;
+
+        }
+
+        table {
+            background-color: rgb(231, 188, 255);
+            width: 800px;
+            height: 500px;
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div align="center">
+        <table width="500px" border="2" cellpadding="2" cellspacing="0">
+            <thead>
+                <th>Calculate</th>
+                <th>Ans</th>
+            </thead>
+            <tr>
+                <td>
+                    <h3>A + B</h3>
+                </td>
+                <td id="addition"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>A - B</h3>
+                </td>
+                <td id="subtraction"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>A * B</h3>
+                </td>
+                <td id="multiplication"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>A / B</h3>
+                </td>
+                <td id="division"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>A % B</h3>
+                </td>
+                <td id="modul"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script>
+
+        let a = parseInt(prompt("Enter the value of A: "));
+        let b = parseInt(prompt("Enter the value of B: "));
+
+        document.getElementById("addition").innerHTML = `<h3>${a + b}</h3>`;
+        document.getElementById("subtraction").innerHTML = `<h3>${a - b}</h3>`;
+        document.getElementById("multiplication").innerHTML = `<h3>${a * b}</h3>`;
+        document.getElementById("division").innerHTML = `<h3>${a / b}</h3>`;
+        document.getElementById("modul").innerHTML = `<h3>${a % b}</h3>`;
+
+    </script>
+
+</body>
+
+</html>

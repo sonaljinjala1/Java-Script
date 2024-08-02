@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator ledder if else</title>
+</head>
+
+<body>
+    <script>
+
+        let operator = prompt('Enter the operator: ');
+
+        let num1 = parseFloat(prompt('Enter first number: '));
+        let num2 = parseFloat(prompt('Enter second number: '));
+
+        let total;
+
+        if (operator == '+') {
+            total = num1 + num2;
+        }
+        else if (operator == '-') {
+            total = num1 - num2;
+        }
+        else if (operator == '*') {
+            total = num1 * num2;
+        }
+        else {
+            total = num1 / num2;
+        }
+        document.write(`${num1} ${operator} ${num2} = ${total}`);
+    </script>
+</body>
+
+</html>

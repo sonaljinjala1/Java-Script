@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci series</title>
+</head>
+
+<body>
+    <script>
+       
+        let n = parseInt(prompt('Enter the number of fibonacci: '));
+        let n1 = 0, n2 = 1, a;
+
+        for (let i = 1; i <= n; i++) {
+            document.write(n1);
+            a = n1 + n2;
+            n1 = n2;
+            n2 = a;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime_Number</title>
+</head>
+
+<body>
+
+    <script>
+        //3 7  //prime  number avo number jene apne Aak pan sakhya vade bhagi sakye nahi. tene prime number kahvay che 
+        //hamesha  yad rakhvu ke  prime number avo number jene apne  1 pan sakhya vade bhagi sakay nahi teva j number ne prime number kayvay che. most imp che khas yad rakhvu.
+
+
+        let no = 7;
+        let check = false;
+        for (i = 1; i <= no; i++) {
+            if (no % 2 == 0) {
+                check = true;
+                break;
+            }
+        }
+
+        if (check == true) {
+            document.write("not Prime Number");
+        }
+        else {
+            document.write("Prime no");
+        }
+    </script>
+
+</body>
+
+</html>

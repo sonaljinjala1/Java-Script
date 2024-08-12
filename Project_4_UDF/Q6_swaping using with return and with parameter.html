@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swaping using with return and with parameter </title>
+</head>
+<body>
+
+    <!-- 3. swaping using with return and with parameter  -->
+
+    <script>
+
+        function swap(num1, num2){
+
+            console.log("Before Swaping : ");
+            console.log("number-1 : " + num1);
+            console.log("number-2 : " + num2);
+
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            num1 = num1 - num2;
+
+            return ("After Swaping :" + "<br>" + num1 + "<br>" + num2);
+
+        }
+
+        let a = parseInt(prompt("Enter the number of A: "));
+        let b = parseInt(prompt("Enter the number of B: "));
+
+        let ans = swap(a, b);
+        document.write(ans);
+
+    </script>
+    
+</body>
+</html>

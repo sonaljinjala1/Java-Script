@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palidrom_number</title>
+</head>
+
+<body>
+    <!-- imp code che   khas yad rakhvo -->
+    <script type="text/javascript">
+        let no = 121;
+        let rev = 0;
+        let i = 0;
+        let original = no;
+
+        for (; no != 0;) {
+            let rem = no % 10;
+            rev = rev * 10 + rem
+            no = Math.floor(no / 10);
+            console.log(no);
+        }
+
+        if (original == rev) {
+            document.write(` <h1> This number is palidrome number</h1>`)
+        }
+        else {
+            document.write(` <h1> This number is not  palidrome number</h1>`)
+        }
+    </script>
+
+
+</body>
+
+</html>

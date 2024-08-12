@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion of it</title>
+</head>
+
+<body>
+
+   
+    <script type="text/javascript">
+
+        class bankAccount {
+            constructor(accno, bal) {
+                this.accno = accno;
+                this.bal = bal;
+            }
+
+            withdraw(val) {
+                if (this.bal < val) {
+                    console.log("insufficient balance");
+                } else {
+                    this.bal = this.bal - val;
+                    console.log(`balance:- ${this.bal}`);
+                }
+            }
+
+            deposite(val) {
+                if (this.bal < val) {
+                    console.log("insufficient balance");
+                } else {
+                    this.bal = this.bal + val;
+                    console.log(`balance:- ${this.bal}`);
+                }
+            }
+
+        }
+
+        let acno = parseInt(prompt("Enter Bank Account Number: "));
+        if (acno === 12345) {
+
+            let bal= 10000;
+            let bank = new bankAccount(acno, bal);
+            let check = prompt("Enter Deposite / Withdraw / CheckBalance : ");
+            if (check == "deposite") {
+                let dep = parseInt(prompt("Enter The Amount To Deposite:"));
+                bank.deposite(dep);
+            } else if (check == "withdraw") {
+                let wDraw = parseInt(prompt("Enter The Amount To Deposite:"));
+                bank.deposite(wDraw);
+            } else if (check == "checkBalance") {
+                console.log(`Your Current Balance is: ${bal}.`);
+            } else{
+                alert("Invalid Input!!");
+            }
+
+        } else {
+            alert("Account Number is Wrong!!");
+        }
+
+    </script>
+
+</body>
+
+</html>

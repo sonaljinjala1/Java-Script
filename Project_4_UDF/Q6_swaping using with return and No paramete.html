@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waping using with return and No parameter</title>
+</head>
+<body>
+
+    <!-- 3. swaping using with return and No parameter  -->
+
+    <script>
+
+        function swap(){
+            
+            let num1 = parseInt(prompt("Enter the number of A: "));
+            let num2 = parseInt(prompt("Enter the number of B: "));
+
+            console.log("Before Swaping : ");
+            console.log("number-1 : " + num1);
+            console.log("number-2 : " + num2);
+
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            num1 = num1 - num2;
+
+            return ("After Swaping :" + "<br>" + num1 + "<br>" + num2);
+
+        }
+
+
+        let ans = swap();
+        document.write(ans);
+
+    </script>
+    
+</body>
+</html>

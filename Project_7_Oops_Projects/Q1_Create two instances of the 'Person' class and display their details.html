@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create two instances of the 'Person' class and display their detail</title>
+</head>
+
+<body>
+
+   
+     <script type="text/javascript">
+
+        class person{
+            constructor(name, age, country){
+                this.name = name;
+                this.age = age;
+                this.country = country;
+            }
+            
+            personDetails(){
+                console.log(`Name: ${this.name}, Age: ${this.age}, Country: ${this.country}`);
+            }
+
+        }
+        let person1 = new person("asha", 20, "INDIA");
+        let person2 = new person("sonal", 21, "USA");
+
+        console.log("First person details:");
+        person1.personDetails();
+
+        console.log("Second person details:");
+        person2.personDetails();
+    </script> 
+
+</body>
+
+</html>

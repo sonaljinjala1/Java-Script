@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter_app</title>
+    <style>
+        body {
+            background-color: rgb(167, 214, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            font-size: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .count {
+            width: 1000px;
+            height: 400px;
+            background-color: rgb(214, 236, 255);
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+        .button,
+        .reset {
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+            margin: 100px 0;
+        }
+
+        button {
+            width: 160px;
+            height: 60px;
+            background-color: rgb(107, 186, 255);
+            font-size: 40px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 0 0 0.5px #ffffff;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 50px;
+            font-weight: 600;
+            margin: 0 !important;
+            margin-bottom: 30px;
+        }
+        #decrement:disabled{
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <h1>Counter-App</h1>
+    <div class="container">
+        <div class="count">
+            <div class="button">
+                <button type="button" onclick="increment()">+</button>
+                <h2 id="number">0</h2>
+                <button type="button" onclick="decrement()" id="decrement">-</button>
+            </div>
+
+            <div class="reset">
+                <button type="button" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let num = 0;
+        if(num<=0){
+            document.getElementById('decrement').disabled = true;
+        }
+
+        const  increment = () =>{
+            num++;
+            document.getElementById('number').innerHTML = `${num}`;
+            document.getElementById('decrement').disabled = false;
+        }
+
+        const  decrement = () =>{
+            if(num<=0){
+                document.getElementById('decrement').disabled = true;
+            }
+            else{
+                num--;
+                document.getElementById('number').innerHTML = `${num}`;
+            }
+        }
+        const  reset = () =>{
+            num=0;
+            document.getElementById('number').innerHTML = `${num}`;
+            document.getElementById('decrement').disabled = true;
+        }
+
+    </script>
+</body>
+
+</html>
